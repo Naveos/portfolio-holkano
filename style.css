@@ -66,7 +66,7 @@ Barre de navigation
 Project cards
 =============================
 */
-@keyframes shadingSpawnCard1 {
+@keyframes shadingSpawnCard {
     0% {
         opacity: 0;
     }
@@ -87,6 +87,8 @@ Project cards
     border-radius: 50px;
     transition: all 0.3s;
     font-size: 8mm;
+    filter: brightness(0.6);
+    border: 5px black;
 }
 .card a {
     color: white;
@@ -96,15 +98,95 @@ Project cards
     width: 500px;
     border-radius: 50px;
 }
+@media (max-width: 480px) {
+    .card img {
+        width: 100%;
+    }
+}
 .card:nth-child(1) {
-    animation: shadingSpawnCard1 1.5s ease 1s;
+    animation: shadingSpawnCard 1.5s ease 1s;
     animation-fill-mode: forwards;
 }
 .card:nth-child(2) {
-    animation: shadingSpawnCard1 1.5s ease 1.5s;
+    animation: shadingSpawnCard 1.5s ease 1.5s;
     animation-fill-mode: forwards;
 }
 .card:hover {
-    padding: 2.5%;
-    font-size: 10mm;
+    filter: brightness(1);
+}
+
+.video {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; 
+  height: 0;
+}
+.video iframe {
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.head {
+    opacity: 0;
+    filter: brightness(0.6);
+    transition: all 0.3s;
+}
+.head:hover {
+    filter: brightness(1);
+    transform: translateY(-15px);
+}
+.head:nth-child(1) {
+    animation: headSpawn 1.5s ease 0.5s;
+    animation-fill-mode: forwards;
+}
+.head:nth-child(2) {
+    animation: headSpawn 1.5s ease 0.6s;
+    animation-fill-mode: forwards;
+}
+.head:nth-child(3) {
+    animation: headSpawn 1.5s ease 0.7s;
+    animation-fill-mode: forwards;
+}
+.head:nth-child(4) {
+    animation: headSpawn 1.5s ease 0.8s;
+    animation-fill-mode: forwards;
+}
+.head:nth-child(5) {
+    animation: headSpawn 1.5s ease 0.9s;
+    animation-fill-mode: forwards;
+}
+.head:nth-child(6) {
+    animation: headSpawn 1.5s ease 1s;
+    animation-fill-mode: forwards;
+}
+.head:nth-child(7) {
+    animation: headSpawn 1.5s ease 1.1s;
+    animation-fill-mode: forwards;
+}
+.head:nth-child(8) {
+    animation: headSpawn 1.5s ease 1.2s;
+    animation-fill-mode: forwards;
+}
+.head:nth-child(9) {
+    animation: headSpawn 1.5s ease 1.3s;
+    animation-fill-mode: forwards;
+}
+.head:nth-child(10) {
+    animation: headSpawn 1.5s ease 1.4s;
+    animation-fill-mode: forwards;
+}
+.head:nth-child(11) {
+    animation: headSpawn 1.5s ease 1.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes headSpawn {
+    0% {
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }
